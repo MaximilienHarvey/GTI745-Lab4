@@ -6,6 +6,7 @@ TagManager:
   tags:
   - projectile
   - FxTemporaire
+  - Luggage
   layers:
   - Default
   - TransparentFX
