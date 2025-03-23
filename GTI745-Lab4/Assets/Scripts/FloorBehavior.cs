@@ -11,6 +11,10 @@ public class FloorBehavior : MonoBehaviour
         {
             collision.transform.position = respawnPos.position;
             collision.transform.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            foreach (Rigidbody rb in collision.transform.gameObject.GetComponentsInChildren<Rigidbody>())
+            {
+                rb.velocity = Vector3.zero;
+            }
         }
     }
 }

@@ -8,7 +8,16 @@ public class LuggageDespawner : MonoBehaviour
     {
         if (other.transform.CompareTag("Luggage"))
         {
-            Destroy(other.transform.parent.gameObject);
+            bool wasAllowed = other.transform.parent.parent.gameObject.GetComponent<LuggageContent>().isAllowed;
+            Destroy(other.transform.parent.parent.gameObject);
+            if (wasAllowed)
+            {
+                // Incrémenter le score
+            }
+            else
+            {
+                // Enlever une vie
+            }
         }
     }
 }
