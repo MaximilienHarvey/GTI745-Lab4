@@ -12,11 +12,13 @@ public class LuggageDespawner : MonoBehaviour
             Destroy(other.transform.parent.parent.gameObject);
             if (wasAllowed)
             {
-                // Incrémenter le score
+                // Incrï¿½menter le score
+                GameManager.Instance.AddLuggageWithoutContrabandScore();
             }
             else
             {
                 // Enlever une vie
+                GameManager.Instance.LoseLife();
             }
         }
     }
