@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LuggageDespawner : MonoBehaviour
 {
+    [SerializeField] private bool wantsGoodLuggage = true;
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.CompareTag("Luggage"))
@@ -12,13 +13,30 @@ public class LuggageDespawner : MonoBehaviour
             Destroy(other.transform.parent.parent.gameObject);
             if (wasAllowed)
             {
-                // Incr�menter le score
-                GameManager.Instance.AddLuggageWithoutContrabandScore();
+                
+                if (wantsGoodLuggage)
+                {
+                    // Incrémenter le score
+                    GameManager.Instance.AddLuggageWithoutContrabandScore();
+                }
+                else
+                {
+                    // Décrémenter le score
+                    GameManager.Instance.RemoveBadLuggageScore();
+                }
             }
             else
             {
-                // Enlever une vie
-                GameManager.Instance.LoseLife();
+                if (wantsGoodLuggage)
+                {
+                    // Enlever une vie
+                    GameManager.Instance.LoseLife();
+                }
+                else
+                {
+                    // Incrémenter le score
+                    GameManager.Instance.AddLuggageWithContrabandScore();
+                }
             }
         }
     }

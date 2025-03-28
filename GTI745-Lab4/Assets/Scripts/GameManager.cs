@@ -6,6 +6,7 @@ public class GameManager : Singleton<GameManager>
     
     [SerializeField] private int _noContrabandScore = 3;
     [SerializeField] private int _contrabandScore = 5;
+    [SerializeField] private int _badLuggageScore = 3;
     
     public int RemainingLives { get; private set; } = 3;
     
@@ -19,6 +20,11 @@ public class GameManager : Singleton<GameManager>
     public void AddLuggageWithContrabandScore()
     {
         Score += _contrabandScore;
+    }
+    
+    public void RemoveBadLuggageScore()
+    {
+        Score -= _badLuggageScore;
     }
     
     public void LoseLife()
