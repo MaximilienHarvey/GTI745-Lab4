@@ -1,9 +1,13 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Utilities;
 
 public class GameManager : Singleton<GameManager>
 {
+    private const string IntroScene = "Intro_Scene";
+    private const string GameFlow = "Game_Flow";
+    private const string EndScene = "End_Scene";
     
     [SerializeField] private int _noContrabandScore = 3;
     [SerializeField] private int _contrabandScore = 5;
@@ -47,7 +51,22 @@ public class GameManager : Singleton<GameManager>
         
         if(RemainingLives <= 0)
         {
-            // Game Over
+            GameOver();
         }
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Game_Flow");
+    }
+
+    private void GameOver()
+    {
+        SceneManager.LoadScene(EndScene);
+    }
+    
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene(IntroScene);
     }
 }
