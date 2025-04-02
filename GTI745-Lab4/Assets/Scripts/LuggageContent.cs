@@ -11,6 +11,7 @@ public class LuggageContent : MonoBehaviour
     [SerializeField] private int numberOfItemsInside = 1;
     [SerializeField] private float timeBeforeOneMoreItem = 60.0f;
     public bool isAllowed = true;
+    public bool hasBeenTriggered = false;
 
     private void Start()
     {
