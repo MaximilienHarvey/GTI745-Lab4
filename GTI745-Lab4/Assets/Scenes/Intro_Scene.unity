@@ -1003,7 +1003,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444596510}
   m_LocalRotation: {x: -0, y: -0.41764164, z: -0, w: 0.9086119}
-  m_LocalPosition: {x: -4.57, y: 0, z: 4.61}
+  m_LocalPosition: {x: -1.29, y: 0, z: 0.554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2413,15 +2413,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5092296661257141185, guid: 1beed9ae6056e634fa085b10d5c352ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -289.3798
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5092296661257141185, guid: 1beed9ae6056e634fa085b10d5c352ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -40.161697
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5092296661257141185, guid: 1beed9ae6056e634fa085b10d5c352ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 250.39494
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5092296661257141185, guid: 1beed9ae6056e634fa085b10d5c352ea, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2454,6 +2454,18 @@ PrefabInstance:
     - target: {fileID: 5092296661257141187, guid: 1beed9ae6056e634fa085b10d5c352ea, type: 3}
       propertyPath: m_Name
       value: Systems
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092296661863887698, guid: 1beed9ae6056e634fa085b10d5c352ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092296661863887698, guid: 1beed9ae6056e634fa085b10d5c352ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092296661863887698, guid: 1beed9ae6056e634fa085b10d5c352ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1beed9ae6056e634fa085b10d5c352ea, type: 3}
