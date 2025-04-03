@@ -47,3 +47,8 @@ MonoBehaviour:
   _persistent: 0
   _noContrabandScore: 3
   _contrabandScore: 5
+  _badLuggageScore: 3
+  _heartsController: {fileID: 0}
+  _scoreController: {fileID: 0}
+  <RemainingLives>k__BackingField: 3
+  <Score>k__BackingField: 0

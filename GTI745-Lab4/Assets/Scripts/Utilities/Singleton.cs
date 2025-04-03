@@ -75,6 +75,15 @@ namespace Utilities
 
         protected virtual void OnAwake()
         {
+            var instances = FindObjectsOfType<T>(true);
+            var count     = instances.Length;
+            if (count > 1)
+            {
+                Debug.LogWarning(
+                    $"[{nameof(Singleton)}<{typeof(T)}>] There should never be more than one {nameof(Singleton)} of type {typeof(T)} in the scene, but {count} were found. The first instance found will be used, and all others will be destroyed.");
+                for (var i = 1; i < instances.Length; i++)
+                    Destroy(instances[i].gameObject);
+            }
         }
 
         #endregion
