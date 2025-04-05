@@ -1182,7 +1182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Airport Security
+  m_Text: Airport Mania
 --- !u!222 &1112392301
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2466,6 +2466,10 @@ PrefabInstance:
     - target: {fileID: 5092296661863887698, guid: 1beed9ae6056e634fa085b10d5c352ea, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6111917777425995803, guid: 1beed9ae6056e634fa085b10d5c352ea, type: 3}
+      propertyPath: near clip plane
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1beed9ae6056e634fa085b10d5c352ea, type: 3}
