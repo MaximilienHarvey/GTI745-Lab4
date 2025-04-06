@@ -42,6 +42,12 @@ public class LuggageContent : MonoBehaviour
         }
 
         // Maybe spawn at a random position within the luggage
+        Vector3 randomPos = new Vector3(
+            Random.Range(-3f / 2, 3f / 2),
+            Random.Range(-1f / 2, 1f / 2),
+            Random.Range(-4.3f / 2, 4.3f / 2)
+        );
+        
         Instantiate(itemToSpawn, transform.position, Quaternion.identity, ContentParent.transform);
     }
 }
