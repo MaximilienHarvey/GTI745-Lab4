@@ -5,6 +5,18 @@ using UnityEngine;
 public class LuggageDespawner : MonoBehaviour
 {
     [SerializeField] private bool wantsGoodLuggage = true;
+
+    [SerializeField] private AudioClip loseLifeSound;
+    [SerializeField] private AudioClip wrongLuggageSound;
+    [SerializeField] private AudioClip correctLuggageSound;
+    
+    private AudioSource audioSource;
+    
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.CompareTag("Luggage"))
@@ -29,6 +41,7 @@ public class LuggageDespawner : MonoBehaviour
                 {
                     // Décrémenter le score
                     GameManager.Instance.RemoveBadLuggageScore();
+                    audioSource.PlayOneShot(wrongLuggageSound);
                 }
             }
             else
@@ -37,11 +50,13 @@ public class LuggageDespawner : MonoBehaviour
                 {
                     // Enlever une vie
                     GameManager.Instance.LoseLife();
+                    audioSource.PlayOneShot(loseLifeSound);
                 }
                 else
                 {
                     // Incrémenter le score
                     GameManager.Instance.AddLuggageWithContrabandScore();
+                    audioSource.PlayOneShot(correctLuggageSound);
                 }
             }
         }

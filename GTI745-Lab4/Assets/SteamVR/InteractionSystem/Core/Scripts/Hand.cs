@@ -137,6 +137,9 @@ namespace Valve.VR.InteractionSystem
 
         private SteamVR_Events.Action inputFocusAction;
 
+        [SerializeField] private AudioClip _grabSound;
+        private AudioSource _audioSource;
+
         public bool isActive
         {
             get
@@ -360,6 +363,8 @@ namespace Valve.VR.InteractionSystem
         //-------------------------------------------------
         public void AttachObject(GameObject objectToAttach, GrabTypes grabbedWithType, AttachmentFlags flags = defaultAttachmentFlags, Transform attachmentOffset = null)
         {
+            _audioSource.PlayOneShot(_grabSound);
+            
             AttachedObject attachedObject = new AttachedObject();
             attachedObject.attachmentFlags = flags;
             attachedObject.attachedOffsetTransform = attachmentOffset;
@@ -833,6 +838,8 @@ namespace Valve.VR.InteractionSystem
             {
                 yield break;
             }
+            
+            _audioSource = gameObject.AddComponent<AudioSource>();
 
             //Debug.Log( "<b>[SteamVR Interaction]</b> Hand - initializing connection routine" );
 
