@@ -1038,7 +1038,7 @@ GameObject:
   - component: {fileID: 1561456717}
   - component: {fileID: 1561456721}
   m_Layer: 0
-  m_Name: Return to menu button
+  m_Name: Quit game button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1209,7 +1209,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1561456714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15f8e8376d8e645468d455df149c42ec, type: 3}
+  m_Script: {fileID: 11500000, guid: a5e1fa249b184bc6811fc2dd112702d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onHandClick:
@@ -2000,7 +2000,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Return to menu
+  m_Text: Quit
 --- !u!222 &1873643057
 CanvasRenderer:
   m_ObjectHideFlags: 0
